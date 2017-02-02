@@ -1,0 +1,26 @@
+Task 1
+mkdir cs3308    Makes Directory
+cd cs3308       Goes into directory
+mv cs3308 csci3308    Changes directory name
+cp filenames    Copies File
+rmdir filenames    Deletes the file
+mkdir tmp rmdir tmp    Makes Directory tmp, then deletes it, vim filename
+less filename  2nd Way to view contents of a file
+head filename   Views just the beginning of the file 
+tail filename   Views the end of a file
+grep the *      Lists all the files that contain the in it
+pwd /books.txt   list full path to all files names books.txt
+zip -r dir.zip directory 
+unzip dir.zip -d /tmp
+tar -czf dir.tar tmp
+tar -xvzf dir.tar -d /tmp
+touch filename
+
+Task 2
+sort new.txt
+sort -n -t ':' -k3,3 new.txt
+sort -n -t ':' -k4,4 new.txt | -n':' -k3,3 new.txt
+grep -wn "Marx" new.txt
+wc -l new.txt
+awk -d : -f4 /etc/passwd | > tmp
+
