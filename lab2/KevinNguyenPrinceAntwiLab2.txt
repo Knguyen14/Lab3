@@ -1,0 +1,38 @@
+Kevin Nguyen
+Prince Antwi
+
+Step 2
+diff fruitsOld.txt fruitsNew.txt
+< means the word has been removed from fruitsOld.txt
+> means the word has been added to fruitsNew.txt
+-c gives you a detailed look at what has been added and removed.
+
+Step 3
+wc -l testPasswd.txt
+wc -m testPasswd.txt
+
+Step 4
+cut -f 1 -d ':' testPasswd.txt
+cut -f 2,4 -d ' ' grades.txt
+
+Step 5
+cut -f 4 -d ':' testPasswd.txt | sort -n | uniq -d
+cut -f 4 -d ':' testPasswd.txt | sort -n | uniq -D|uniq  > lab2output.txt 
+cut -f 1,6 -d ':' testPasswd.txt | grep ^[m,w,s]
+
+Step 6
+sed 's/[A-Za-z]*//g' leetSpeak.txt
+sed 's/[0-9]*//g' leetSpeak.txt
+sed 's/[0-9]/_/g' leetSpeak.txt 
+sed 's/0/o/g;s/4/a/g;s/3/e/g;s/7/t/g;s/5/s/g;s/1/i/g' leetSpeak.txt 
+
+Step 7
+awk 'NR>1 {print $1, $2, avg = (($3+ $4+ $5+ $6+ $7)/5)*100,"%" }' grades.txt
+awk '{avg=(sum	+= $3)/7*100}	END {print "Class Average:",avg}' grades.txt
+
+Step 8
+grep -c "[0-9]\{3\}[-][0-9]\{4\}" regex_practice_data.txt
+grep -c "303-441" regex_practice_data.txt
+grep -c "@" regex_practice_data.txt
+grep -c "@[A-Za-z0-9][A-Za-z0-9.-]*\.\(gov\|Gov\|GOV\)" regex_practice_data.txt
+grep -c "[A-Ma-m]*\.[A-Za-z]*\@" regex_practice_data.txt
